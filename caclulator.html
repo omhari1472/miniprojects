@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #a9b3cc;
+        }
+      .container {
+        position: relative;
+        top: 10rem;
+        width: 250px;
+        height: 380px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(36, 34, 34);
+        justify-content: center;
+        border-radius: 10px;
+        padding: 2rem;
+      }
+      .calculator {
+        /* text-align: center; */
+        display: flex;
+        justify-content: space-between;
+        color: white;
+      }
+      input {
+        margin-top: 0.5rem;
+        padding: 0.7rem;
+        border-radius: 7px;
+        background-color: #454854;;
+        box-shadow: -5px -3px 2px rgba(0, 0, 0, 0.42);
+        color: white;
+      }
+      .but {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .equal {
+        padding: 0 2rem;
+      }
+      button {
+        border-radius: 39px;
+      }
+      .green{
+        color: rgb(109 255 181);
+      }
+      .text{
+        text-align: end;
+        width: 100% !important;
+        margin-top: 1rem;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <form action="">
+          <div class="">
+            <label for="">Calculator</label>
+            <input type="text" class="text" name="display" />
+          </div>
+          <div class="but">
+            <input type="button" class="green" value="AC" onclick="display.value ='' "/>
+            <input type="button" class="green" value="DE" onclick="display.value = display.value.toString().slice(0,-1)  "/>
+            <input type="button" class="green" value="." onclick="display.value +='.' "/>
+            <input type="button"  class="green" value="/" onclick="display.value +='/ ' " />
+          </div>
+          <div class="but">
+            <input type="button" value="7" onclick="display.value +='7' "/>
+            <input type="button" value="8" onclick="display.value +='8' " />
+            <input type="button" value="9" onclick="display.value +='9' " />
+            <input type="button" class="green" value="*" onclick="display.value +='*' "/>
+          </div>
+          <div class="but">
+            <input type="button" value="4" onclick="display.value +='4' " />
+            <input type="button" value="5" onclick="display.value +='5' " />
+            <input type="button" value="6" onclick="display.value +='6' " />
+            <input type="button" class="green" value="-" onclick="display.value +='-' "/>
+          </div>
+          <div class="but">
+            <input type="button" value="1" onclick="display.value +='1' "/>
+            <input type="button" value="2" onclick="display.value +='2' "/>
+            <input type="button" value="3" onclick="display.value +='3' "/>
+            <input type="button" class="green" value="+" onclick="display.value +='+' "/>
+          </div>
+          <div class="but">
+            <input type="button" value="00" onclick="display.value +='00' "/>
+            <input type="button" value="0" onclick="display.value +='0' "/>
+            <input type="button" class="green equal"  value="=" onclick="display.value=eval(display.value)" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
